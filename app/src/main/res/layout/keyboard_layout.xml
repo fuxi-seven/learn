@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="guide"
+            type="com.hly.learn.ViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            android:text="@{guide.rightImageName}" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@{guide.rightImageRes}" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:textColor="@color/colorAccent"
+            android:text="@{guide.rightImageDescription}" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="350dp"
+            android:gravity="center"
+            android:onClick="@{guide::upStep}"
+            android:text="@string/up"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_shadow_start_color"
+            android:visibility="@{guide.step!=1?View.VISIBLE:View.INVISIBLE}" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="350dp"
+            android:gravity="center"
+            android:onClick="@{guide::nextStep}"
+            android:text="@string/next"
+            android:textStyle="bold"
+            android:visibility="@{guide.step!=3?View.VISIBLE:View.INVISIBLE}" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="400dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:step="@{guide.textValue}"/>
+
+    </RelativeLayout>
+</layout>

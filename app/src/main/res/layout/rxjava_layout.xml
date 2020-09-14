@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/click_txt"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="开始" />
+
+    <TextView
+        android:id="@+id/display_title"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="RxJava入门" />
+
+    <TextView
+        android:id="@+id/display_txt"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/retrofit_title"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="150dp"
+        android:text="Retrofit+RxJava请求翻译" />
+
+    <TextView
+        android:id="@+id/retrofit_txt"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp" />
+
+    <TextView
+        android:id="@+id/merge_title"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="Merge操作符使用" />
+
+    <TextView
+        android:id="@+id/merge_txt"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/zip_title"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:text="Zip操作符使用" />
+
+    <TextView
+        android:id="@+id/zip_txt"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="250dp" />
+
+    <Button
+        android:id="@+id/click_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/zip_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="防抖测试" />
+
+    <EditText
+        android:id="@+id/edit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/click_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="输入搜索字段" />
+
+
+    <TextView
+        android:id="@+id/result_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">learn</string>
+    <string name="up">上一道</string>
+    <string name="next">下一道</string>
+    <string name="chuancai">川菜</string>
+    <string name="lucai">鲁菜</string>
+    <string name="xiangcai">湘菜</string>
+    <string name="chuancaides">川菜以家常菜为主，高端菜为辅，取材多为日常百味，也不乏山珍海鲜。其特点在于红味讲究麻、辣、鲜、香；白味口味多变，包含甜、卤香、怪味等多种口味</string>
+    <string name="lucaides">鲁菜，是起源于山东省淄博市博山区的齐鲁风味，是中国传统菜系中唯一的自发型菜,是历史最悠久、技法最丰富、难度最高、最见功力的菜系，是八大菜系之首</string>
+    <string name="xiangcaides">湘菜制作精细，用料上比较广泛，口味多变，品种繁多；色泽上油重色浓，讲求实惠；品味上注重香辣、香鲜、软嫩；制法上以煨、炖、腊、蒸、炒诸法见称</string>
+</resources>

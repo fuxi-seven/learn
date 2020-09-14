@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="ValueAnimator动画:实现TypeEvaluator,不断返回位置坐标,不断调用invalidate(),从而调用onDraw()来不断重绘实现动画效果" />
+
+    <com.hly.learn.view.ValueAnimatorView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:text="ObjectAnimator动画:由于是自定义属性,需要实现get和set方法,另外实现TypeEvaluator.会不断调用set方法.然后在set方法里面调用invalidate(),从而调用onDraw()来不断重绘实现动画效果" />
+
+    <com.hly.learn.view.ObjectAnimatorView
+        android:id="@+id/objectAnimatorView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="360dp" />
+</RelativeLayout>

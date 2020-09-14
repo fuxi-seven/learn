@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:unselectedAlpha="0.5"
+        android:spacing="5dp"
+        android:animationDuration="1"
+        android:layout_marginTop="400dp" />
+</RelativeLayout>
