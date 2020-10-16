@@ -56,12 +56,16 @@ public class MenuAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = new ViewHolder();
+        ViewHolder viewHolder;
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.grid_item, null);
+            viewHolder = new ViewHolder();
+            viewHolder.image = convertView.findViewById(R.id.gridView_item_image);
+            viewHolder.name = convertView.findViewById(R.id.gridView_item_name);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.image = convertView.findViewById(R.id.gridView_item_image);
-        viewHolder.name = convertView.findViewById(R.id.gridView_item_name);
         viewHolder.image.setImageResource(imgList.get(position));
         viewHolder.name.setText(nameList.get(position));
         return convertView;

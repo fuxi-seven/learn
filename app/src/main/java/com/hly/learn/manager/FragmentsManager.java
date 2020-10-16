@@ -1,6 +1,7 @@
 package com.hly.learn.manager;
 
 import com.hly.learn.fragments.AnimatorFragment;
+import com.hly.learn.fragments.AppListFragment;
 import com.hly.learn.fragments.ConstraintFragment;
 import com.hly.learn.fragments.GalleryFragment;
 import com.hly.learn.fragments.JniFragment;
@@ -33,6 +34,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("Kotlin");
         DEFAULT_LIST.add("Animator");
         DEFAULT_LIST.add("RxJava");
+        DEFAULT_LIST.add("RecyclerViewPager");
     }
 
     public static Fragment getFragment(int position) {
@@ -59,6 +61,8 @@ public class FragmentsManager {
                 return new AnimatorFragment();
             case 10:
                 return new RxJavaFragment();
+            case 11:
+                return new AppListFragment();
             default:
                 return null;
         }
