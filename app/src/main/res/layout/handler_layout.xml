@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="子线程创建Handler"
+        android:layout_marginTop="50dp"
+        android:textAppearance="@style/TabLayoutTextStyle"/>
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="子线程发送Message"
+        android:layout_marginTop="200dp"
+        android:textAppearance="@style/TabLayoutTextStyle"/>
+
+    <Button
+        android:id="@+id/end_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="子线程结束Looper"
+        android:layout_marginTop="350dp"
+        android:textAppearance="@style/TabLayoutTextStyle"/>
+</RelativeLayout>
