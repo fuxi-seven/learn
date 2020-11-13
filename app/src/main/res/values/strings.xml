@@ -2,6 +2,8 @@
     <string name="app_name">learn</string>
     <string name="up">上一道</string>
     <string name="next">下一道</string>
+    <string name="upImg">上一张</string>
+    <string name="nextImg">下一张</string>
     <string name="chuancai">川菜</string>
     <string name="lucai">鲁菜</string>
     <string name="xiangcai">湘菜</string>

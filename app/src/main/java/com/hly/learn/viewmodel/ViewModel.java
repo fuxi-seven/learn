@@ -1,12 +1,13 @@
-package com.hly.learn;
+package com.hly.learn.viewmodel;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
+import com.hly.learn.data.ModalData;
+
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
-import androidx.lifecycle.MutableLiveData;
 
 public class ViewModel {
 

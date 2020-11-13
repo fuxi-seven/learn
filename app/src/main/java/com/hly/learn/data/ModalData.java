@@ -1,7 +1,9 @@
-package com.hly.learn;
+package com.hly.learn.data;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+
+import com.hly.learn.R;
 
 public class ModalData {
 

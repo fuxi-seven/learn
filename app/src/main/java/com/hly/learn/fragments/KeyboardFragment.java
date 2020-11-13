@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hly.learn.ViewModel;
+import com.hly.learn.viewmodel.ViewModel;
 import com.hly.learn.databinding.KeyboardLayoutBinding;
 
 import com.hly.learn.R;

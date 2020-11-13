@@ -13,6 +13,7 @@ import com.hly.learn.fragments.MouseFragment;
 import com.hly.learn.fragments.RemoteControlFragment;
 import com.hly.learn.fragments.RxJavaFragment;
 import com.hly.learn.fragments.SelfDeterminedFragment;
+import com.hly.learn.fragments.ViewModelLiveDataFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +24,12 @@ import androidx.fragment.app.Fragment;
 public class FragmentsManager {
 
     private static List<String> DEFAULT_LIST = new ArrayList<>();
+
     static {
         DEFAULT_LIST.add("网格");
         DEFAULT_LIST.add("网页");
-        DEFAULT_LIST.add("数据绑定");
+        DEFAULT_LIST.add("DataBinding");
+        DEFAULT_LIST.add("MVVM");
         DEFAULT_LIST.add("xml解析");
         DEFAULT_LIST.add("画廊");
         DEFAULT_LIST.add("自定义View");
@@ -48,24 +51,26 @@ public class FragmentsManager {
             case 2:
                 return new KeyboardFragment();
             case 3:
-                return new RemoteControlFragment();
+                return new ViewModelLiveDataFragment();
             case 4:
-                return new GalleryFragment();
+                return new RemoteControlFragment();
             case 5:
-                return new SelfDeterminedFragment();
+                return new GalleryFragment();
             case 6:
-                return new ConstraintFragment();
+                return new SelfDeterminedFragment();
             case 7:
-                return new JniFragment();
+                return new ConstraintFragment();
             case 8:
-                return new KotlinFragment();
+                return new JniFragment();
             case 9:
-                return new AnimatorFragment();
+                return new KotlinFragment();
             case 10:
-                return new RxJavaFragment();
+                return new AnimatorFragment();
             case 11:
-                return new AppListFragment();
+                return new RxJavaFragment();
             case 12:
+                return new AppListFragment();
+            case 13:
                 return new HandlerFragment();
             default:
                 return null;

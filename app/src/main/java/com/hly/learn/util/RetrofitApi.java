@@ -39,6 +39,9 @@ public interface RetrofitApi {
     @GET("weather_mini")
     Call<WeatherInfo> getWeatherInfoThird(@Query("city") String city);
 
+    @GET("HPImageArchive.aspx")
+    Observable<ImageBean> getImage(@Query("format") String format, @Query("idx") int idx, @Query("n") int n);
+
     @POST("translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=")
     @FormUrlEncoded
     Call<Translation2> getTranslationThird(@Field("i") String targetSentence);
