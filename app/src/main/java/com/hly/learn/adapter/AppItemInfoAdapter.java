@@ -46,9 +46,7 @@ public class AppItemInfoAdapter extends BaseAdapter {
         final AppItemInfo itemInfo = mAppItemInfoList.get(position);
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.app_item_layout, null);
-            viewHolder = new ViewHolder();
-            viewHolder.image = convertView.findViewById(R.id.iv_launch);
-            viewHolder.name = convertView.findViewById(R.id.tv_launch);
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -64,8 +62,13 @@ public class AppItemInfoAdapter extends BaseAdapter {
         return convertView;
     }
 
-    class ViewHolder {
+    static class ViewHolder {
         ImageView image;
         TextView name;
+
+        public ViewHolder(View itemView) {
+            image = itemView.findViewById(R.id.tv_launch);
+            name = itemView.findViewById(R.id.tv_launch);
+        }
     }
 }
