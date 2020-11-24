@@ -10,6 +10,7 @@ import com.hly.learn.fragments.KeyboardFragment;
 import com.hly.learn.fragments.KotlinFragment;
 import com.hly.learn.fragments.MenuFragment;
 import com.hly.learn.fragments.MouseFragment;
+import com.hly.learn.fragments.ProxyFragment;
 import com.hly.learn.fragments.RemoteControlFragment;
 import com.hly.learn.fragments.RxJavaFragment;
 import com.hly.learn.fragments.SelfDeterminedFragment;
@@ -40,6 +41,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("RxJava");
         DEFAULT_LIST.add("RecyclerViewPager");
         DEFAULT_LIST.add("Handler");
+        DEFAULT_LIST.add("Java代理");
     }
 
     public static Fragment getFragment(int position) {
@@ -72,6 +74,8 @@ public class FragmentsManager {
                 return new AppListFragment();
             case 13:
                 return new HandlerFragment();
+            case 14:
+                return new ProxyFragment();
             default:
                 return null;
         }

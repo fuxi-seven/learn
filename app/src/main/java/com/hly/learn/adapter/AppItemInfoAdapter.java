@@ -67,7 +67,7 @@ public class AppItemInfoAdapter extends BaseAdapter {
         TextView name;
 
         public ViewHolder(View itemView) {
-            image = itemView.findViewById(R.id.tv_launch);
+            image = itemView.findViewById(R.id.iv_launch);
             name = itemView.findViewById(R.id.tv_launch);
         }
     }
