@@ -41,7 +41,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("RxJava");
         DEFAULT_LIST.add("RecyclerViewPager");
         DEFAULT_LIST.add("Handler");
-        DEFAULT_LIST.add("Java代理");
+        DEFAULT_LIST.add("Java代理及Hook");
     }
 
     public static Fragment getFragment(int position) {

@@ -1,12 +1,15 @@
 package com.hly.learn.fragments;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
+import com.hly.learn.HookActivity;
 import com.hly.learn.R;
 import com.hly.learn.dynamicProxy.Person1;
 import com.hly.learn.dynamicProxy.StuInvocationHandler;
 import com.hly.learn.dynamicProxy.Student1;
+import com.hly.learn.hook.HookUtils;
 import com.hly.learn.staticProxy.Person;
 import com.hly.learn.staticProxy.Student;
 import com.hly.learn.staticProxy.StudentProxy;
@@ -24,8 +27,12 @@ public class ProxyFragment extends BaseFragment implements View.OnClickListener{
     public void initData(View view) {
         Button sBtn = view.findViewById(R.id.st_btn);
         Button dBtn = view.findViewById(R.id.dy_btn);
+        Button hkBtn = view.findViewById(R.id.hk_btn);
         sBtn.setOnClickListener(this);
         dBtn.setOnClickListener(this);
+        hkBtn.setOnClickListener(this);
+        HookUtils.hookOnClickListener(hkBtn);
+        HookUtils.hookInstrumentation(mContext);
     }
 
 
@@ -35,6 +42,8 @@ public class ProxyFragment extends BaseFragment implements View.OnClickListener{
             staticProxy();
         } else if (v.getId() == R.id.dy_btn) {
             dynamicProxy();
+        } else if (v.getId() == R.id.hk_btn) {
+            hookActivity();
         }
     }
 
@@ -57,5 +66,12 @@ public class ProxyFragment extends BaseFragment implements View.OnClickListener{
                 new Class<?>[]{Person1.class}, stuInvocationHandler);
         //代理对象执行操作
         stuProxy.submitMoney();
+    }
+
+    private void hookActivity() {
+        Intent i = new Intent();
+        i.setClass(mContext, HookActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        mContext.getApplicationContext().startActivity(i);
     }
 }
