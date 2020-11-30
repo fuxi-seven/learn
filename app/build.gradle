@@ -2,23 +2,34 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
-
+    compileSdkVersion adcompileSdkVersion
 
     defaultConfig {
-        applicationId "com.hly.learn"
-        minSdkVersion 27
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        if (isRelease) {
+            applicationId adapplicationId
+        }
+        minSdkVersion adminSdkVersion
+        targetSdkVersion adtargetSdkVersion
+        versionCode adversionCode
+        versionName adversionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+
+        debug {
+            //定制版本变量,编译后在BuildConfig里面会生成对应的变量,可以在java中定制使用
+            //变量类型，变量名，变量内容
+            buildConfigField("boolean", "isRelease", String.valueOf(isRelease))
+            buildConfigField("int", "flag", "0")
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("boolean", "isRelease", String.valueOf(isRelease))
+            buildConfigField("int", "flag", "1")
         }
     }
 
@@ -32,42 +43,56 @@ android {
         enabled = true
     }
 
+    //配置资源环境，方便测试环境，打包不集成到正式环境
+    sourceSets {
+        main {
+            if (isRelease) {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    //release时debug目录下文件不需要 合并到主工程
+                    exclude '**/debug/**'
+                }
+            } else {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation androidSupportLib.appcompat
+    implementation androidSupportLib.constraintlayout
+    implementation androidSupportLib.lifecycleextensions
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.google.android.material:material:1.2.0'
-    implementation "androidx.core:core-ktx:1.3.1"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation androidSupportLib.material
+    implementation androidSupportLib.corektx
+    implementation androidSupportLib.kotlin
     implementation project(path: ':lib')
 
     // Android 支持 Rxjava
     // 此处一定要注意使用RxJava2的版本
-    implementation 'io.reactivex.rxjava2:rxjava:2.0.2'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation androidSupportLib.rxjava2
+    implementation androidSupportLib.rxandroid
 
     // Android 支持 Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation androidSupportLib.retrofit
 
     // 衔接 Retrofit & RxJava
     // 此处一定要注意使用RxJava2的版本
-    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation androidSupportLib.rxjava2adapter
 
     // 支持Gson解析
-    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation androidSupportLib.gson
 
     // rxbinding
-    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation androidSupportLib.rxbinding
 
     //Glide
-    implementation 'com.github.bumptech.glide:glide:4.6.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation androidSupportLib.glide
+    annotationProcessor androidSupportLib.glidecompiler
 }
 repositories {
     mavenCentral()
