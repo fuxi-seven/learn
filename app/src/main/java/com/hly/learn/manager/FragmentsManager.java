@@ -15,6 +15,7 @@ import com.hly.learn.fragments.RemoteControlFragment;
 import com.hly.learn.fragments.RxJavaFragment;
 import com.hly.learn.fragments.SelfDeterminedFragment;
 import com.hly.learn.fragments.ViewModelLiveDataFragment;
+import com.hly.learn.fragments.VolleyRequestFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("RecyclerViewPager");
         DEFAULT_LIST.add("Handler");
         DEFAULT_LIST.add("Java代理及Hook");
+        DEFAULT_LIST.add("网络请求");
     }
 
     public static Fragment getFragment(int position) {
@@ -76,6 +78,8 @@ public class FragmentsManager {
                 return new HandlerFragment();
             case 14:
                 return new ProxyFragment();
+            case 15:
+                return new VolleyRequestFragment();
             default:
                 return null;
         }

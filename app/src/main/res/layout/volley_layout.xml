@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/volley_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/volley_img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/volley_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="请求图片"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/volley_img"
+        android:layout_marginTop="50dp"/>
+</RelativeLayout>
