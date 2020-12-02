@@ -66,9 +66,12 @@ public class BitmapHttpRequest implements IHttpRequest{
                 InputStream in = urlConnection.getInputStream();
                 //回调监听器的listener方法
                 httpListener.onSuccess(in);
+            } else {
+                httpListener.onFailure();
             }
         } catch (Exception e) {
             e.printStackTrace();
+            httpListener.onFailure();
         }
     }
 }
