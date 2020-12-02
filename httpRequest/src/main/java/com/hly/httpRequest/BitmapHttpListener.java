@@ -39,9 +39,12 @@ public class BitmapHttpListener<M> implements IHttpListener{
 
     @Override
     public void onFailure() {
-        handler.post(() -> {
-            if (dataListener != null) {
-                dataListener.onFailure();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                if (dataListener != null) {
+                    dataListener.onFailure();
+                }
             }
         });
     }
