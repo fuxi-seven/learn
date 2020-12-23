@@ -5,6 +5,7 @@ import com.hly.learn.fragments.AppListFragment;
 import com.hly.learn.fragments.ConstraintFragment;
 import com.hly.learn.fragments.GalleryFragment;
 import com.hly.learn.fragments.HandlerFragment;
+import com.hly.learn.fragments.InjectFragment;
 import com.hly.learn.fragments.JniFragment;
 import com.hly.learn.fragments.KeyboardFragment;
 import com.hly.learn.fragments.KotlinFragment;
@@ -44,6 +45,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("Handler");
         DEFAULT_LIST.add("Java代理及Hook");
         DEFAULT_LIST.add("网络请求");
+        DEFAULT_LIST.add("注解实现");
     }
 
     public static Fragment getFragment(int position) {
@@ -80,6 +82,8 @@ public class FragmentsManager {
                 return new ProxyFragment();
             case 15:
                 return new VolleyRequestFragment();
+            case 16:
+                return new InjectFragment();
             default:
                 return null;
         }
