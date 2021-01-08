@@ -10,4 +10,20 @@
         android:layout_centerVertical="true"
         android:text="我是Hook出来的Activity，没在AndroidManifest.xml里面注册"
         android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:gravity="center" />
 </RelativeLayout>

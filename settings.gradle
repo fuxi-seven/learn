@@ -1,3 +1,6 @@
+include ':apt-sdk'
+include ':apt-processor'
+include ':apt-annotation'
 include ':httpRequest'
 include ':lib'
 rootProject.name='learn'

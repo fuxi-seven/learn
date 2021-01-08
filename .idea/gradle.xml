@@ -11,6 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/apt-annotation" />
+            <option value="$PROJECT_DIR$/apt-processor" />
+            <option value="$PROJECT_DIR$/apt-sdk" />
             <option value="$PROJECT_DIR$/httpRequest" />
             <option value="$PROJECT_DIR$/lib" />
           </set>

@@ -65,7 +65,7 @@ dependencies {
     implementation androidSupportLib.constraintlayout
     implementation androidSupportLib.lifecycleextensions
     implementation project(path: ':httpRequest')
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation androidSupportLib.material
@@ -94,6 +94,11 @@ dependencies {
     //Glide
     implementation androidSupportLib.glide
     annotationProcessor androidSupportLib.glidecompiler
+
+    //apt
+    implementation project(':apt-annotation')
+    annotationProcessor project(':apt-processor')
+    implementation project(':apt-sdk')
 }
 repositories {
     mavenCentral()
