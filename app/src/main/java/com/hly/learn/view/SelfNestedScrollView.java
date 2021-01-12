@@ -3,7 +3,6 @@ package com.hly.learn.view;
 import android.content.Context;
 import android.hardware.SensorManager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
