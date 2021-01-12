@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="160dp">
+
+    <ImageView
+        android:id="@+id/nestedView_item_image"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/nestedView_item_name"
+        android:layout_below="@+id/nestedView_item_image"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:gravity="center"/>
+</RelativeLayout>

@@ -11,6 +11,7 @@ import com.hly.learn.fragments.KeyboardFragment;
 import com.hly.learn.fragments.KotlinFragment;
 import com.hly.learn.fragments.MenuFragment;
 import com.hly.learn.fragments.MouseFragment;
+import com.hly.learn.fragments.NestedScrollFragment;
 import com.hly.learn.fragments.ProxyFragment;
 import com.hly.learn.fragments.RemoteControlFragment;
 import com.hly.learn.fragments.RxJavaFragment;
@@ -46,6 +47,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("Java代理及Hook");
         DEFAULT_LIST.add("网络请求");
         DEFAULT_LIST.add("注解实现");
+        DEFAULT_LIST.add("NestedScrollView");
     }
 
     public static Fragment getFragment(int position) {
@@ -84,6 +86,8 @@ public class FragmentsManager {
                 return new VolleyRequestFragment();
             case 16:
                 return new InjectFragment();
+            case 17:
+                return new NestedScrollFragment();
             default:
                 return null;
         }
