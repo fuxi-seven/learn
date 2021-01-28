@@ -55,7 +55,6 @@ public class BindViewProcessor extends AbstractProcessor {
         mClassCreatorFactoryMap.clear();
         //得到所有包含该注解的element集合
         Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(BindView.class);
-        System.out.println("---------------------start-------------------------------");
         for (Element element : elements) {
             //转换为VariableElement，VariableElement为element的子类
             VariableElement variableElement = (VariableElement) element;
@@ -96,7 +95,6 @@ public class BindViewProcessor extends AbstractProcessor {
                 e.printStackTrace();
             }
         }
-        System.out.println("-----------------------end------------------------------");
         return true;
     }
 }

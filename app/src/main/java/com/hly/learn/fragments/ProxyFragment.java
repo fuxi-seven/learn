@@ -60,7 +60,7 @@ public class ProxyFragment extends BaseFragment implements View.OnClickListener{
         //创建实例对象，该对象就是被代理的对象
         Person1 jack = new Student1();
         //创建一个与代理对象相关联的InvocationHandler
-        StuInvocationHandler stuInvocationHandler = new StuInvocationHandler<>(jack);
+        StuInvocationHandler<Person1> stuInvocationHandler = new StuInvocationHandler<>(jack);
         //创建一个代理对象stuProxy来代理jack，代理对象的每个执行方法都会替换执行Invocation中的invoke方法
         Person1 stuProxy = (Person1) Proxy.newProxyInstance(Person1.class.getClassLoader(),
                 new Class<?>[]{Person1.class}, stuInvocationHandler);
