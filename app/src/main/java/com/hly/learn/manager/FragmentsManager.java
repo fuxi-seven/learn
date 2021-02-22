@@ -4,6 +4,7 @@ import com.hly.learn.fragments.AnimatorFragment;
 import com.hly.learn.fragments.AppListFragment;
 import com.hly.learn.fragments.ConstraintFragment;
 import com.hly.learn.fragments.GalleryFragment;
+import com.hly.learn.fragments.GenericTypeFragment;
 import com.hly.learn.fragments.HandlerFragment;
 import com.hly.learn.fragments.InjectFragment;
 import com.hly.learn.fragments.JniFragment;
@@ -50,6 +51,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("注解实现");
         DEFAULT_LIST.add("NestedScrollView");
         DEFAULT_LIST.add("SurfaceView");
+        DEFAULT_LIST.add("泛型的应用实例");
     }
 
     public static Fragment getFragment(int position) {
@@ -92,6 +94,8 @@ public class FragmentsManager {
                 return new NestedScrollFragment();
             case 18:
                 return new SurfaceViewFragment();
+            case 19:
+                return new GenericTypeFragment();
             default:
                 return null;
         }

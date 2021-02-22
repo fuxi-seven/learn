@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/generic_txt"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="泛型允许程序员在强类型程序设计语言中编写代码时使用一些以后才指定的类型，在实例化时作为参数指明这些类型;\n本实例泛型用于抽取出基类及公共方法，子类在实现时通过传入不同的接口来对应不同的实现" />
+
+    <Button
+        android:id="@+id/generic_btn1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="本地实现1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        />
+
+    <Button
+        android:id="@+id/generic_btn2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="本地实现2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        />
+</RelativeLayout>
