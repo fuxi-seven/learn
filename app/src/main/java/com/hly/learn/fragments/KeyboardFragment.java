@@ -30,6 +30,7 @@ public class KeyboardFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         KeyboardLayoutBinding binding = DataBindingUtil.inflate(inflater, R.layout.keyboard_layout, container, false);
         View view = binding.getRoot();
+        //注意此处每次配置更新后都会重新创建新的ViewModel，不会保存数据
         mViewModel = new ViewModel(mContext);
         binding.setGuide(mViewModel);
         return view;

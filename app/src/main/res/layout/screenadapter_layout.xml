@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hly.learn.screenAdapter.SelfDeterminedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="110dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_lucai" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="55dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_chuancai" />
+</com.hly.learn.screenAdapter.SelfDeterminedLayout>

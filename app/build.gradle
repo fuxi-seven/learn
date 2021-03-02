@@ -39,8 +39,15 @@ android {
         }
     }
 
-    dataBinding {
+    //out date define
+    /*dataBinding {
         enabled = true
+    }*/
+
+    ndkVersion '21.1.6352462'
+
+    buildFeatures {
+        dataBinding = true
     }
 
     //配置资源环境，方便测试环境，打包不集成到正式环境

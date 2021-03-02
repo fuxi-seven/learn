@@ -13,7 +13,7 @@ public class LiveDataTestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_debug);
+        setContentView(R.layout.screenadapter_layout);
         observe();
     }
 

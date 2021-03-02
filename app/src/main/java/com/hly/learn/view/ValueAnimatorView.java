@@ -1,7 +1,5 @@
 package com.hly.learn.view;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
