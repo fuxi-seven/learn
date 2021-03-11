@@ -94,7 +94,7 @@ public class SelfNestedScrollView extends NestedScrollView implements
                                 ((ViewGroup) viewPager2.getChildAt(0)).getChildAt(
                                         viewPager2.getCurrentItem()), RecyclerView.class);
                         if (childRecyclerView != null) {
-                            childRecyclerView.fling(0,getVelocityByDistance(splineFlingDistance));
+                            childRecyclerView.fling(0,getVelocityByDistance(splineFlingDistance) - totalDy);
                         }
                     }
                 }
