@@ -49,8 +49,9 @@ public class FlowLayout extends ViewGroup {
         int paddingTop = getPaddingTop();
         int paddingBottom = getPaddingBottom();
 
-        int selfWidth = MeasureSpec.getSize(widthMeasureSpec);//ViewGroup解析的宽度
-        int selfHeight = MeasureSpec.getSize(heightMeasureSpec);//ViewGroup解析的高度
+        //获取ViewGroup的宽高，与运算，后面30位为代表宽高,前两位代表mode
+        int selfWidth = MeasureSpec.getSize(widthMeasureSpec);
+        int selfHeight = MeasureSpec.getSize(heightMeasureSpec);
 
         List<View> lineViews = new ArrayList<>();//用于保持一行的所有view
         int lineWidthUsed = 0;//记录已经使用了的宽度
@@ -104,7 +105,7 @@ public class FlowLayout extends ViewGroup {
             }
         }
 
-        //获取mode值
+        //获取mode值，与运算前两位
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
 
