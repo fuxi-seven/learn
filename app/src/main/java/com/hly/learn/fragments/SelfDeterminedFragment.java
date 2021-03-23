@@ -1,9 +1,11 @@
 package com.hly.learn.fragments;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
 import com.hly.learn.R;
+import com.hly.learn.SelfDeterminedViewActivity;
 import com.hly.learn.view.SelfDeterminedLayout;
 
 import java.util.ArrayList;
@@ -13,6 +15,7 @@ public class SelfDeterminedFragment extends BaseFragment {
 
     private SelfDeterminedLayout mSelfDeterminedLayout;
     private Button mUpdateTxt;
+    private Button mNext;
     private List<String> mHotWordList = new ArrayList<>();
 
     @Override
@@ -39,6 +42,13 @@ public class SelfDeterminedFragment extends BaseFragment {
                     mUpdateTxt.setText("切换");
                 }
                 mSelfDeterminedLayout.invalidate();
+            }
+        });
+        mNext = view.findViewById(R.id.another);
+        mNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity();
             }
         });
     }
@@ -70,5 +80,12 @@ public class SelfDeterminedFragment extends BaseFragment {
             mHotWordList.add("郭炜炜");
             mHotWordList.add("新冠疫苗");
         }
+    }
+
+    private void startActivity() {
+        Intent i = new Intent();
+        i.setClass(mContext, SelfDeterminedViewActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
     }
 }

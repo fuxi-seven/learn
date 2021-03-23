@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:text="热词搜索"/>
+
+    <com.hly.learn.view.FlowLayout
+        android:id="@+id/layout1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="新冠肺炎"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:textSize="20sp"
+            android:text="两会"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="你好，李焕英"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="唐人街探案三"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="福原爱离婚"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:textSize="20sp"
+            android:text="特斯拉"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="吐槽大会"/>
+    </com.hly.learn.view.FlowLayout>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_below="@id/layout1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:text="其他相关"/>
+
+    <com.hly.learn.view.FlowLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="百度回港上市"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:textSize="20sp"
+            android:text="人民日报评校内减负校外增负"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="英国制裁中国４名官员"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:textSize="25sp"
+            android:text="中方回应加拿大"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="张京同声翻译"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="希望加强与中国直接对话"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_pager_indicator_active"
+            android:text="王牌对王牌"/>
+    </com.hly.learn.view.FlowLayout>
+</RelativeLayout>

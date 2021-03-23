@@ -11,7 +11,6 @@ import com.hly.learn.viewmodel.MainViewModel;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 public class ViewModelLiveDataFragment extends BaseFragment {
 
@@ -24,7 +23,6 @@ public class ViewModelLiveDataFragment extends BaseFragment {
 
     @Override
     public void initData(View view) {
-
     }
 
     @Override
