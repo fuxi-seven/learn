@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="50dp"
-        android:gravity="center" />
+        android:scaleType="fitXY" />
 
     <Button
         android:id="@+id/volley_btn"
