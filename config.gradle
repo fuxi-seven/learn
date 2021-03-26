@@ -6,7 +6,7 @@ ext {
     adminSdkVersion = 27
     adtargetSdkVersion = 28
     adversionCode = 1
-    adversionName = "1.0"
+    adversionName = "1.0.1"
 
     androidSupportLib = [
             appcompat          : 'androidx.appcompat:appcompat:1.2.0',

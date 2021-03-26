@@ -1,9 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.hly.gradle'
 
 android {
     compileSdkVersion adcompileSdkVersion
-
+    //AAPT: error: failed to read PNG signature: file does not start with PNG signature.
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
     defaultConfig {
         if (isRelease) {
             applicationId adapplicationId
@@ -48,6 +51,10 @@ android {
 
     buildFeatures {
         dataBinding = true
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     //配置资源环境，方便测试环境，打包不集成到正式环境
@@ -109,4 +116,10 @@ dependencies {
 }
 repositories {
     mavenCentral()
+}
+
+releaseHelper {
+    appName = "hlyLearn"
+    uKey = "c9d2625c0cf221d8f4a98738f4c05e9a"
+    apiKey = "fac8875534d045a2be3f229abd46cc3e"
 }

@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'java-gradle-plugin'
+}
+
+repositories {
+    google()
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:4.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.8.0'
+}
+
+group 'com.hly.gradle'
+version '1.0.1'
