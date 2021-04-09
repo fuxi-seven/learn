@@ -22,6 +22,7 @@
 
         <activity android:name=".livedata.LiveDataTestActivity" />
         <activity android:name=".SelfDeterminedViewActivity" />
+        <activity android:name=".AutoServiceActivity"/>
     </application>
 
 </manifest>

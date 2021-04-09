@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
@@ -21,6 +22,7 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.element.VariableElement;
 import javax.lang.model.util.Elements;
+import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
 @AutoService(Processor.class)
@@ -28,12 +30,14 @@ public class BindViewProcessor extends AbstractProcessor {
     private boolean isUseJavapoet = true;
     private Elements mElementUtils;
     private Map<String, ClassCreatorFactory> mClassCreatorFactoryMap = new HashMap<>();
+    private Messager mMessager;
 
     @Override
     public synchronized void init(ProcessingEnvironment processingEnvironment) {
         super.init(processingEnvironment);
         //拿到工具类
         mElementUtils = processingEnvironment.getElementUtils();
+        mMessager = processingEnvironment.getMessager();
     }
 
     @Override
@@ -58,7 +62,8 @@ public class BindViewProcessor extends AbstractProcessor {
         for (Element element : elements) {
             //转换为VariableElement，VariableElement为element的子类
             VariableElement variableElement = (VariableElement) element;
-            System.out.println(variableElement.getSimpleName());
+            mMessager.printMessage(Diagnostic.Kind.NOTE,
+                    "variableElement SimpleName is: " + variableElement.getSimpleName());
             //可以获取类的信息的element，也是element的子类
             TypeElement classElement = (TypeElement) variableElement.getEnclosingElement();
             //获取包名加类名

@@ -113,6 +113,12 @@ dependencies {
     implementation project(':apt-annotation')
     annotationProcessor project(':apt-processor')
     implementation project(':apt-sdk')
+
+    //AutoService组件化
+    implementation project(':autoServiceSecondModule')
+    implementation project(':autoServiceFirstModule')
+    implementation project(':autoServiceMainModule')
+    implementation project(':autoServiceCommonLibrary')
 }
 repositories {
     mavenCentral()
