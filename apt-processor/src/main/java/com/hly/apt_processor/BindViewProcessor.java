@@ -69,7 +69,7 @@ public class BindViewProcessor extends AbstractProcessor {
             //获取包名加类名
             String fullClassName = classElement.getQualifiedName().toString();
 
-            //保存到集合中
+            //根据不同的包名加类名作为key创建对应的ClassCreatorFactory作为value保存到mClassCreatorFactoryMap中
             ClassCreatorFactory factory = mClassCreatorFactoryMap.get(fullClassName);
             if (factory == null) {
                 factory = new ClassCreatorFactory(mElementUtils, classElement);
@@ -77,6 +77,7 @@ public class BindViewProcessor extends AbstractProcessor {
             }
             BindView bindViewAnnotation = variableElement.getAnnotation(BindView.class);
             int id = bindViewAnnotation.value();
+            //将key内的所有包含BindView注解的变量put到对应的ClassCreatorFactory内
             factory.putElement(id, variableElement);
         }
         //开始创建java类
