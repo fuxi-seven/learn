@@ -15,14 +15,16 @@
         android:layout_height="wrap_content"
         android:text="切换"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp" />
+        android:layout_below="@+id/selfDetermine"
+        android:layout_marginTop="50dp" />
 
     <Button
         android:id="@+id/another"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/update"
         android:text="另一个"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp" />
+        android:layout_marginTop="50dp" />
 
 </RelativeLayout>

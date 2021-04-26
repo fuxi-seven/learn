@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
-import com.hly.learn.hook.HookUtils;
 import com.hly.learn.view.FragmentsAdapter;
 
 public class MainActivity extends AppCompatActivity {

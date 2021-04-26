@@ -28,7 +28,7 @@
             android:layout_height="300dp"
             android:layout_below="@+id/description"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:scaleType="fitXY"
             app:url="@{viewModel.imageUrl}" />
 
@@ -38,7 +38,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/description"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="400dp"
             android:gravity="center"
             android:onClick="@{viewModel::onClick}"
             android:text="@string/upImg"
@@ -52,7 +52,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/description"
             android:layout_marginLeft="230dp"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="400dp"
             android:gravity="center"
             android:onClick="@{viewModel::onClick}"
             android:text="@string/nextImg"
