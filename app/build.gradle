@@ -15,8 +15,18 @@ android {
         targetSdkVersion adtargetSdkVersion
         versionCode adversionCode
         versionName adversionName
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //支持多渠道打包
+        flavorDimensions "1.0.1"
+    }
+
+    signingConfigs {
+        androidPlatform {
+            keyAlias 'platform'
+            keyPassword '123456'
+            storeFile file('../keystores/platform.jks')
+            storePassword '123456'
+        }
     }
 
     buildTypes {
@@ -26,6 +36,20 @@ android {
             //变量类型，变量名，变量内容
             buildConfigField("boolean", "isRelease", String.valueOf(isRelease))
             buildConfigField("int", "flag", "0")
+            buildConfigField("String", "ServerUrl", getServer("debug"))
+            //Zipalign优化
+            //zipAlignEnabled true
+            //移除无用的resource文件
+            //shrinkResources true
+            signingConfig signingConfigs.androidPlatform
+            //修改编译之后的名字
+            applicationVariants.all{
+                variant->
+                    variant.outputs.all{
+                        def fileName = "${getCurrentTime()}_V${defaultConfig.versionName}.apk"
+                        outputFileName = fileName
+                    }
+            }
         }
 
         release {
@@ -33,6 +57,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField("boolean", "isRelease", String.valueOf(isRelease))
             buildConfigField("int", "flag", "1")
+            buildConfigField("String", "ServerUrl", getServer("release"))
+            //Zipalign优化
+            //zipAlignEnabled true
+            //移除无用的resource文件
+            //shrinkResources true
+            signingConfig signingConfigs.androidPlatform
+            applicationVariants.all{
+                variant->
+                    variant.outputs.all{
+                        def fileName = "${getCurrentTime()}_V${defaultConfig.versionName}.apk"
+                        outputFileName = fileName
+                    }
+            }
         }
     }
 
@@ -51,6 +88,39 @@ android {
 
     buildFeatures {
         dataBinding = true
+    }
+
+    //支持多渠道打包
+    /*productFlavors {
+        xiaomi {
+            buildConfigField("String", "platform", "\"xiaomi\"")
+            manifestPlaceholders = [package_name: "com.hly.learn",
+                                    APP_NAME    : "@string/app_name"]
+        }
+        yingyongbao {
+            buildConfigField("String", "platform", "\"yingyongbao\"")
+            manifestPlaceholders = [package_name: "com.hly.learn",
+                                    APP_NAME    : "@string/app_name"]
+        }
+        huawei {
+            buildConfigField("String", "platform", "\"huawei\"")
+            manifestPlaceholders = [package_name: "com.hly.learn",
+                                    APP_NAME    : "@string/app_name"]
+        }
+    }*/
+
+    //一键化多渠道打包
+    productFlavors {
+        xiaomi{}
+        huawei{}
+        yingyongbao{}
+    }
+
+    productFlavors.all{
+        flavor ->
+            flavor.manifestPlaceholders = [package_name: "com.hly.learn",
+                                           APP_NAME    : "@string/app_name"]
+            buildConfigField("String", "platform", "\"${name}\"")
     }
 
     lintOptions {
@@ -72,6 +142,43 @@ android {
         }
     }
 }
+
+//获取文件中字段的值
+def getServer(String str) {
+    def server
+    Properties properties = new Properties()
+    def proFile = file("src/main/filters/" + str + "/config.properties")
+    if (proFile.canRead()) {
+        properties.load(new FileInputStream(proFile))
+        if (properties != null) {
+            server = properties['SERVER']
+        }
+    }
+    return server
+}
+
+//获取当前时间
+def getCurrentTime() {
+    def createTime = new Date().format("YYYY-MM-dd-hh-mm-ss", TimeZone.getTimeZone("GMT+08:00"))
+    return createTime
+}
+
+//在build结束后将build的文件copy到target中
+/*gradle.buildFinished {
+    copy {
+        from('build/outputs/apk/xiaomi/debug/app-xiaomi-debug.apk')
+        into('../target')
+        rename('app-xiaomi-debug.apk', 'xiaomilearn.apk')
+
+        from('build/outputs/apk/huawei/debug/app-huawei-debug.apk')
+        into('../target')
+        rename('app-huawei-debug.apk', 'huaweilearn.apk')
+
+        from('build/outputs/apk/yingyongbao/debug/app-yingyongbao-debug.apk')
+        into('../target')
+        rename('app-yingyongbao-debug.apk', 'yingyongbaolearn.apk')
+    }
+}*/
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
