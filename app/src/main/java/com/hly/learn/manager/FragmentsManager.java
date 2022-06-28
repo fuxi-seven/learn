@@ -3,6 +3,7 @@ package com.hly.learn.manager;
 import com.hly.learn.fragments.AnimatorFragment;
 import com.hly.learn.fragments.AppListFragment;
 import com.hly.learn.fragments.ConstraintFragment;
+import com.hly.learn.fragments.CoroutinesFragment;
 import com.hly.learn.fragments.GalleryFragment;
 import com.hly.learn.fragments.GenericTypeFragment;
 import com.hly.learn.fragments.HandlerFragment;
@@ -52,6 +53,7 @@ public class FragmentsManager {
         DEFAULT_LIST.add("NestedScrollView");
         DEFAULT_LIST.add("SurfaceView");
         DEFAULT_LIST.add("泛型的应用实例");
+        DEFAULT_LIST.add("Kotlin协程");
     }
 
     public static Fragment getFragment(int position) {
@@ -96,6 +98,8 @@ public class FragmentsManager {
                 return new SurfaceViewFragment();
             case 19:
                 return new GenericTypeFragment();
+            case 20:
+                return new CoroutinesFragment();
             default:
                 return null;
         }

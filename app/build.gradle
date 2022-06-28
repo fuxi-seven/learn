@@ -141,6 +141,11 @@ android {
             }
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 //获取文件中字段的值
@@ -195,6 +200,7 @@ dependencies {
     implementation androidSupportLib.corektx
     implementation androidSupportLib.kotlin
     implementation project(path: ':lib')
+    implementation project(path: ':coroutines_retrofit_okhttp')
 
     // Android 支持 Rxjava
     // 此处一定要注意使用RxJava2的版本

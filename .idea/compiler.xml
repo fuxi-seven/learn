@@ -20,6 +20,17 @@
         <module name="learn.apt-processor" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="learn.app" target="11" />
+      <module name="learn.apt-sdk" target="11" />
+      <module name="learn.autoServiceCommonLibrary" target="11" />
+      <module name="learn.autoServiceFirstModule" target="11" />
+      <module name="learn.autoServiceMainModule" target="11" />
+      <module name="learn.autoServiceSecondModule" target="11" />
+      <module name="learn.buildSrc" target="11" />
+      <module name="learn.coroutines_retrofit_okhttp" target="11" />
+      <module name="learn.httpRequest" target="11" />
+      <module name="learn.lib" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

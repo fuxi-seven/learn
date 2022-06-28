@@ -3,7 +3,7 @@ ext {
     isRelease = true
     adapplicationId = "com.hly.learn"
     adcompileSdkVersion = 28
-    adminSdkVersion = 27
+    adminSdkVersion = 28
     adtargetSdkVersion = 28
     adversionCode = 1
     adversionName = "1.0.1"

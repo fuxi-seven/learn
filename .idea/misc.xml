@@ -9,7 +9,17 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32472826086956524" />
+        <entry key="coroutines_retrofit_okhttp/src/main/res/layout/activity_main.xml" value="0.32472826086956524" />
+        <entry key="coroutines_retrofit_okhttp/src/main/res/layout/fragment_main.xml" value="0.32472826086956524" />
+        <entry key="coroutines_retrofit_okhttp/src/main/res/layout/item_imageview.xml" value="0.32472826086956524" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

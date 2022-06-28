@@ -1,8 +1,8 @@
-com/hly/gradle/api/OkHttpUtil.java
- com.hly.gradle.api.OkHttpUtil
 com/hly/gradle/ReleaseHelperPlugin.java
  com.hly.gradle.ReleaseHelperPlugin
  com.hly.gradle.ReleaseHelperPlugin$1
+com/hly/gradle/api/OkHttpUtil.java
+ com.hly.gradle.api.OkHttpUtil
 com/hly/gradle/Extension.java
  com.hly.gradle.Extension
 com/hly/gradle/tasks/UploadTask.java
